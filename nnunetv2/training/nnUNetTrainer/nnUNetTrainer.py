@@ -142,7 +142,7 @@ class nnUNetTrainer(object):
         self.oversample_foreground_percent = 0.33
         self.num_iterations_per_epoch = 250
         self.num_val_iterations_per_epoch = 50
-        self.num_epochs = 1000
+        self.num_epochs = 250
         self.current_epoch = 0
 
         ### Dealing with labels/regions
@@ -192,6 +192,7 @@ class nnUNetTrainer(object):
                                "nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. "
                                "Nature methods, 18(2), 203-211.\n"
                                "#######################################################################\n",
+                               f"Number of Epochs: {self.num_epochs}\n",
                                also_print_to_console=True, add_timestamp=False)
 
     def initialize(self):
